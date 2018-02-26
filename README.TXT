@@ -10,3 +10,5 @@ VERSION or DATE: 2.0 - 26/02/2018
 HOW TO START THIS PROJECT:23/02/2018
 AUTHORS:Álvaro Martín Gómez y Jorge Campos Polo 
 USER INSTRUCTIONS:
+
+26/02/2018 Nueva operacion (potencia) y testing de regesión de la suma 
