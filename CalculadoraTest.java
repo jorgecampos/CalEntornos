@@ -39,20 +39,4 @@ public class CalculadoraTest
     public void tearDown()
     {
     }
-
-    @Test
-    public void Prueba1()
-    {
-         Calculadora calc= new Calculadora();
-        calc.ponNum1(2);
-        calc.ponNum2(2);
-        calc.ponOperacion("POTENCIA");
-        calc.opera();
-        assertEquals(calc.dameResultado(),4);
-        
-        
-        
-        
-    }
 }
-

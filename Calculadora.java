@@ -14,6 +14,8 @@ public class Calculadora
     private int num1;
     private int num2;
     private int rdo;
+    private int base, exponente;
+    private int MAX;
     private Operacion op;
 
     /**
@@ -23,7 +25,7 @@ public class Calculadora
     {
         // initialise instance variables
         num1 = 0;
-        num2 = 0;
+        num2 = 0; 
         op=op.SUMA;
         
     }
@@ -40,6 +42,20 @@ public class Calculadora
         this.num2=n2;
     }
 
+    public void ponBase(int base)
+    {
+        // put your code here
+             this.base = base;
+        
+    }
+    
+    public void ponExponente(int exponente)
+    {
+        // put your code here
+             this.exponente = exponente;
+        
+    }
+    
     public void opera()
     {
         switch(op){
@@ -55,20 +71,22 @@ public class Calculadora
             case DIVIDE:
                 rdo=num1/num2;
                 break;
+            
             case POTENCIA:
-                rdo=num1^num2;
+                rdo=(int)Math.pow(base,exponente);
                 break;
-            /*
             case RAIZ:
-                rdo=num1/num2;
-                break;
-            case LOGARITMO:
-                rdo=num1/num2;
+                rdo=(int)Math.pow(num1,1/num2); 
                 break;
             case FACTORIAL:
-                rdo=num1/num2;
-                break;    
-            */    
+                for(int Factorial = 1 ; Factorial <=num1; num1++)
+                num1 *= Factorial;
+                break;  
+            case LOG:
+                    rdo=(int)Math.log10(num1);
+                    break;
+            
+                
         }
     }
     public void ponOperacion(String opera){
@@ -89,17 +107,16 @@ public class Calculadora
         case "POTENCIA":
             op=op.POTENCIA;
             break;
-        /*
-        case "RAIZ":
-            op=op.DIVIDE;
+        case "RAIZ": 
+            op=op.RAIZ;
             break;
-        case "LOGARITMO":
-            op=op.DIVIDE;
+        case "FACTORIAL": 
+            op=op.FACTORIAL;
             break;
-        case "FACTORIAL":
-            op=op.DIVIDE;
+            case "LOG":
+            op=op.LOG;
             break;    
-        */    
+            
         }
     }
     public int dameResultado()
@@ -114,6 +131,8 @@ public class Calculadora
         System.out.println("Resta :"+ Integer.toString(num1-num2));
         System.out.println("Multiplica :" + Integer.toString(num1*num2));
         System.out.println("Divide :"+ Integer.toString(num1/num2));
-        System.out.println("Potencia :"+ Integer.toString(num1^num2));
+        System.out.println("Potencia:" + Double.toString(rdo=(int)Math.pow(num1,num2)));
+        System.out.println("Raiz :" + Integer.toString(rdo=(int)Math.pow(num1,1/num2)));
+        System.out.println("LOG : " + Integer.toString(rdo=(int)Math.log10(num1)));
     }
 }
