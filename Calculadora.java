@@ -15,7 +15,6 @@ public class Calculadora
     private int num2;
     private int rdo;
     private int base, exponente;
-    private int MAX;
     private Operacion op;
 
     /**
@@ -131,7 +130,7 @@ public class Calculadora
         System.out.println("Resta :"+ Integer.toString(num1-num2));
         System.out.println("Multiplica :" + Integer.toString(num1*num2));
         System.out.println("Divide :"+ Integer.toString(num1/num2));
-        System.out.println("Potencia:" + Double.toString(rdo=(int)Math.pow(num1,num2)));
+        System.out.println("Potencia:" + Integer.toString(rdo=(int)Math.pow(num1,num2)));
         System.out.println("Raiz :" + Integer.toString(rdo=(int)Math.pow(num1,1/num2)));
         System.out.println("LOG : " + Integer.toString(rdo=(int)Math.log10(num1)));
     }
